@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ResponsiveAppBar from "../components/ResponsiveAppBar"
 import MyAppBar from "../components/MyAppBar"
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}
+      <body className={inter.className}>
         <MyAppBar/>
+        <Container maxWidth ="xl">
+          <Box sx={{ bgcolor: 'rgb(140,210,210)', height: '100vh'}}>
+            {children}
+          </Box>
+        </Container>
       </body>
     </html>
   );

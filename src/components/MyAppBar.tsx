@@ -70,7 +70,7 @@ export default function MyAppBar(props: Props) {
   return (
     <Box sx={{ display: 'flex'}}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ bgcolor: "Teal" }}>
+      <AppBar position="sticky" component="nav" sx={{ bgcolor: "Teal" }}>
         <Toolbar>
           <IconButton
             color="inherit"
