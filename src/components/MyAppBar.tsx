@@ -20,18 +20,17 @@ import IsabelleIcon from './IsabelleIcon'
 import Icon from '@mui/material/Icon';
 import ComputerIcon from '@mui/icons-material/Computer';
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
-import ColorLensIcon from '@mui/icons-material/ColorLens';
 import GroupsIcon from '@mui/icons-material/Groups';
 import SendIcon from '@mui/icons-material/Send';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
+import PsychologyIcon from '@mui/icons-material/Psychology';
 
 const drawerWidth = 200;
 const navItems = [
   { name: 'Tech', icon: <ComputerIcon sx={{ mr: 1 }}/>, route: 'tech', iconName: 'ComputerIcon' },
   { name: 'Move', icon: <DirectionsRunIcon sx={{ mr: 1 }}/>, route: 'move' },
-  { name: 'Craft', icon: <ColorLensIcon sx={{ mr: 1 }}/>, route: 'craft' },
-  { name: 'Cook', icon: <RestaurantIcon sx={{ mr: 1 }}/>, route: 'cook' },
+  { name: 'Create', icon: <PsychologyIcon sx={{ mr: 1 }}/>, route: 'create' },
   { name: 'Share', icon: <GroupsIcon sx={{ mr: 1 }}/>, route: 'share' },
   { name: 'Travel', icon: <FlightTakeoffIcon sx={{ mr: 1 }}/>, route: 'travel' },
   { name: 'Contact', icon: <SendIcon sx={{ mr: 1 }}/>, route: 'contact' },
@@ -79,14 +78,15 @@ export default function MyAppBar(props: Props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { lg: 'none' } }}
           >
-            <MenuIcon sxProps={{color: "OldLace"}}/>
+            <MenuIcon sx={{color: "OldLace"}}/>
           </IconButton>
           <IsabelleIcon
             sxProps={{display: 'block', fontFamily: 'monospace', fontWeight: 550, color: "OldLace"}}
           />
+          <Divider orientation="vertical" sx={{ml: 3, mr: 1, display: { xs: 'none', lg: 'flex' }}}/>
           <Box sx={{ display: { xs: 'none', lg: 'flex' }}}>
             {navItems.map(({name, icon, route}) => (
-              <Typography variant="h6" sx={{ m: 2, fontFamily: 'monospace', fontWeight: 550, color: "OldLace" }} key={name}>
+              <Typography variant="subtitle1" sx={{ m: 2, fontFamily: 'monospace', fontWeight: 550, color: "OldLace" }} key={name}>
                 <Link href={`/${route}`}>
                   {icon}{name}
                 </Link>
@@ -105,7 +105,7 @@ export default function MyAppBar(props: Props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { md: 'block', lg: 'none'},
+            display: { xs: 'block', lg: 'none'},
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >

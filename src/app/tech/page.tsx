@@ -8,25 +8,27 @@ import MyAccordion from '../../components/MyAccordion'
 import ComputerIcon from '@mui/icons-material/Computer';
 import StorageIcon from '@mui/icons-material/Storage';
 
+const sxIcon = { ml: 1, mt: 0.2, fontSize: {md: 40} };
+
 const topics= [
   {
     summary: 'Website - Front End',
-    icon: <ComputerIcon sx={{ ml: 1, fontSize: {md: 40} }}/>,
+    icon: <ComputerIcon sx={sxIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Website - Back End',
-    icon: <StorageIcon sx={{ ml: 1, fontSize: {md: 40} }}/>,
+    icon: <StorageIcon sx={sxIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Hackathons',
-    icon: <ComputerIcon sx={{ ml: 1, fontSize: {md: 40} }}/>,
+    icon: <ComputerIcon sx={sxIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
-    icon: <ComputerIcon sx={{ ml: 1, fontSize: {md: 40} }}/>,
+    icon: <ComputerIcon sx={sxIcon}/>,
     details: 'Text to be replaced.'
   },
 ];

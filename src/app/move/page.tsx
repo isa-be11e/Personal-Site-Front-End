@@ -9,25 +9,27 @@ import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import GroupIcon from '@mui/icons-material/Group';
 
+const sxIcon = { ml: 1, mt: 0.2, fontSize: {md: 40} };
+
 const topics= [
   {
     summary: 'Acro Yoga',
-    icon: <GroupIcon sx={{ ml: 1, fontSize: {md: 40} }}/>,
+    icon: <GroupIcon sx={sxIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Yoga',
-    icon: <SelfImprovementIcon sx={{ ml: 1, fontSize: {md: 40} }}/>,
+    icon: <SelfImprovementIcon sx={sxIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Gym',
-    icon: <FitnessCenterIcon sx={{ ml: 1, fontSize: {md: 40} }}/>,
+    icon: <FitnessCenterIcon sx={sxIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
-    icon: <FitnessCenterIcon sx={{ ml: 1, fontSize: {md: 40} }}/>,
+    icon: <FitnessCenterIcon sx={sxIcon}/>,
     details: 'Text to be replaced.'
   },
 ];

@@ -8,25 +8,27 @@ import MyAccordion from '../../components/MyAccordion'
 import FoodBankIcon from '@mui/icons-material/FoodBank';
 import GroupsIcon from '@mui/icons-material/Groups';
 
+const sxIcon = { ml: 1, mt: 0.2, fontSize: {md: 40} };
+
 const topics= [
   {
     summary: 'Food Bank',
-    icon: <FoodBankIcon sx={{ ml: 1, fontSize: {md: 40} }}/>,
+    icon: <FoodBankIcon sx={sxIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Meetups',
-    icon: <GroupsIcon sx={{ ml: 1, fontSize: {md: 40} }}/>,
+    icon: <GroupsIcon sx={sxIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
-    icon: <GroupsIcon sx={{ ml: 1, fontSize: {md: 40} }}/>,
+    icon: <GroupsIcon sx={sxIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
-    icon: <GroupsIcon sx={{ ml: 1, fontSize: {md: 40} }}/>,
+    icon: <GroupsIcon sx={sxIcon}/>,
     details: 'Text to be replaced.'
   },
 ];
