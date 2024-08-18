@@ -26,7 +26,7 @@ import RestaurantIcon from '@mui/icons-material/Restaurant';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 
-const drawerWidth = 200;
+const drawerWidth = 180;
 const navItems = [
   { name: 'Tech', icon: <ComputerIcon sx={{ mr: 1 }}/>, route: 'tech', iconName: 'ComputerIcon' },
   { name: 'Move', icon: <DirectionsRunIcon sx={{ mr: 1 }}/>, route: 'move' },
@@ -45,15 +45,15 @@ export default function MyAppBar(props: Props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box id='inner-box' onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: 1, bgcolor: "OldLace", fontFamily: 'monospace', fontWeight: 700, color: "rgb(0,50,50)" }}>
       <IsabelleIcon
-        sxProps={{ my: 2, fontFamily: 'monospace', fontWeight: 700 }}
+        sxProps={{ my: 2, fontFamily: 'monospace', fontWeight: 700, color: "rgb(0,50,50)" }}
       />
       <Divider />
       <List>
         {navItems.map(({name, icon, route}) => (
           <ListItem key={name} disablePadding>
-            <ListItemButton sx={{ justifyContent: 'center', fontFamily: 'monospace', fontWeight: 700 }}>
+            <ListItemButton>
               <Link href={`/${route}`}>
                 {icon}{name}
               </Link>
