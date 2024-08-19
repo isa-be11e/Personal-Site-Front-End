@@ -36,6 +36,16 @@ const navItems = [
   { name: 'Contact', icon: <SendIcon sx={{ mr: 1 }}/>, route: 'contact' },
 ];
 
+const contact = navItems[navItems.length-1];
+
+const navItem = (name, icon, route) => { return (
+  <Typography variant="subtitle1" sx={{ m: 2, fontFamily: 'monospace', fontWeight: 550, color: "OldLace" }} key={name}>
+    <Link href={`/${route}`}>
+      {icon}{name}
+    </Link>
+  </Typography>);
+};
+
 export default function MyAppBar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -81,18 +91,20 @@ export default function MyAppBar(props: Props) {
             <MenuIcon sx={{color: "OldLace"}}/>
           </IconButton>
           <IsabelleIcon
-            sxProps={{display: 'block', fontFamily: 'monospace', fontWeight: 550, color: "OldLace"}}
+            sxProps={{ flexGrow: {xs: 1, lg: 0}, fontFamily: 'monospace', fontWeight: 550, color: "OldLace"}}
           />
           <Divider orientation="vertical" sx={{ml: 3, mr: 1, display: { xs: 'none', lg: 'flex' }}}/>
-          <Box sx={{ display: { xs: 'none', lg: 'flex' }}}>
-            {navItems.map(({name, icon, route}) => (
-              <Typography variant="subtitle1" sx={{ m: 2, fontFamily: 'monospace', fontWeight: 550, color: "OldLace" }} key={name}>
-                <Link href={`/${route}`}>
-                  {icon}{name}
-                </Link>
-              </Typography>
+          <Box sx={{ display: { xs: 'none', lg: 'flex' }, flexGrow: 1}}>
+            {navItems.slice(0,-1).map(({name, icon, route}) => (
+              navItem(name, icon, route)
             ))}
           </Box>
+          <Box sx={{ display: { xs: 'none', lg: 'flex'}, color: "OldLace" }}>
+            {navItem(contact.name, contact.icon, contact.route)}
+          </Box>
+          <Link href={'/contact'}>
+            <SendIcon sx={{ display: { xs: 'flex', lg: 'none'}, color: "OldLace" }} />
+          </Link>
         </Toolbar>
       </AppBar>
       <nav>
