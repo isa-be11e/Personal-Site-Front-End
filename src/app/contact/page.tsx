@@ -9,6 +9,8 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { pageTitle, pageSubtitle } from '../../themes/typography';
+import { fontSize, colours, fontFamily } from '../../themes/global';
 import axios from 'axios';
 
 export default function Page() {
@@ -28,9 +30,9 @@ export default function Page() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Typography sx={{ p: {xs: 5, md: 10}, justifyContent: 'center', fontFamily: 'monospace', fontWeight: 700, color: "rgb(0,50,50)", fontSize: {xs: 20, md: 30} }}>
+      <Typography sx={pageTitle}>
         Let's get in touch.
-        <FavoriteBorderIcon sx={{ mt: -0.5, ml: 0.5, fontSize: {xs: 20, md: 30} }}/>
+        <FavoriteBorderIcon sx={{ mt: -0.5, ml: 0.5, fontSize: fontSize.responsive.large }}/>
       </Typography>
       <Box justifyContent="center" display="flex">
         <Box
@@ -38,25 +40,31 @@ export default function Page() {
           noValidate
           autoComplete="off"
           sx={{
-            fontFamily: 'monospace',
-            fontWeight: 550,
-            bgcolor: "OldLace",
+            bgcolor: colours.lightBeige,
             p: {xs: 1, md: 5},
             border: 2,
             borderRadius: 2,
-            borderColor: 'rgb(0,50,50)',
-            maxWidth: 1
+            borderColor: colours.darkTeal,
+            maxWidth: 1,
           }}
         >
-          <Stack spacing={2} sx={{ maxWidth: 1, width: { md: 500 }}}>
-          <Typography sx={{ fontFamily: 'monospace', fontWeight: 700, color: "rgb(0,50,50)", fontSize: {xs: 15, md: 20} }}>
+          <Stack
+            spacing={2}
+            sx={{
+              maxWidth: 1,
+              width: { md: 500 },
+              '.MuiInputLabel-root': { fontFamily, color: colours.greyTeal },
+              '.MuiInputBase-root': { fontFamily, color: colours.darkTeal },
+            }}
+          >
+          <Typography sx={pageSubtitle}>
             Send me an email!
           </Typography>
           <TextField id="name" label="Name" variant="outlined" onChange={(e) => setName(e.target.value)}/>
           <TextField id="email" label="Email" variant="outlined" onChange={(e) => setEmail(e.target.value)}/>
           <TextField id="message" label="Message" variant="outlined" multiline rows={4} onChange={(e) => setMessage(e.target.value)}/>
           <Box justifyContent="center" display="flex">
-            <Button justifyContent="center" variant="outlined" sx={{ maxWidth: 0.9, width: { md: 200 }, bgcolor: 'rgb(220, 200, 170)', fontFamily: 'monospace', fontWeight: 700, color: "rgb(0,50,50)"}} onClick={sendMail}>Send</Button>
+            <Button justifyContent="center" variant="outlined" sx={{ maxWidth: 0.9, width: { md: 200 }, bgcolor: colours.darkBeige, ...pageSubtitle}} onClick={sendMail}>Send</Button>
           </Box>
           </Stack>
         </Box>

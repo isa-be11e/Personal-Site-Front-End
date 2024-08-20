@@ -4,6 +4,7 @@ import "./globals.css";
 import MyAppBar from "../components/MyAppBar"
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
+import { colours } from '../themes/global';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <MyAppBar/>
         <Container maxWidth ="xl">
-          <Box sx={{ bgcolor: 'rgb(140,210,210)', height: '100vh'}}>
+          <Box sx={{ bgcolor: colours.lightTeal, height: '100vh'}}>
             {children}
           </Box>
         </Container>

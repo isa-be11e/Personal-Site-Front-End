@@ -8,28 +8,27 @@ import MyAccordion from '../../components/MyAccordion'
 import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import GroupIcon from '@mui/icons-material/Group';
-
-const sxIcon = { ml: 1, mt: 0.2, fontSize: {md: 40} };
+import { accordionIcon } from '../../themes/icon';
 
 const topics= [
   {
     summary: 'Acro Yoga',
-    icon: <GroupIcon sx={sxIcon}/>,
+    icon: <GroupIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Yoga',
-    icon: <SelfImprovementIcon sx={sxIcon}/>,
+    icon: <SelfImprovementIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Gym',
-    icon: <FitnessCenterIcon sx={sxIcon}/>,
+    icon: <FitnessCenterIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
-    icon: <FitnessCenterIcon sx={sxIcon}/>,
+    icon: <FitnessCenterIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
 ];

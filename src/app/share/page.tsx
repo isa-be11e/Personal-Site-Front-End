@@ -7,28 +7,27 @@ import UnderConstruction from '../../components/UnderConstruction';
 import MyAccordion from '../../components/MyAccordion'
 import FoodBankIcon from '@mui/icons-material/FoodBank';
 import GroupsIcon from '@mui/icons-material/Groups';
-
-const sxIcon = { ml: 1, mt: 0.2, fontSize: {md: 40} };
+import { accordionIcon } from '../../themes/icon';
 
 const topics= [
   {
     summary: 'Food Bank',
-    icon: <FoodBankIcon sx={sxIcon}/>,
+    icon: <FoodBankIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Meetups',
-    icon: <GroupsIcon sx={sxIcon}/>,
+    icon: <GroupsIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
-    icon: <GroupsIcon sx={sxIcon}/>,
+    icon: <GroupsIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
-    icon: <GroupsIcon sx={sxIcon}/>,
+    icon: <GroupsIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
 ];

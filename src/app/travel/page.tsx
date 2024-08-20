@@ -6,28 +6,27 @@ import Container from '@mui/material/Container';
 import UnderConstruction from '../../components/UnderConstruction';
 import MyAccordion from '../../components/MyAccordion'
 import PublicIcon from '@mui/icons-material/Public';
-
-const sxIcon = { ml: 1, mt: 0.2, fontSize: {md: 40} };
+import { accordionIcon } from '../../themes/icon';
 
 const topics= [
   {
     summary: 'South East Asia',
-    icon: <PublicIcon sx={sxIcon}/>,
+    icon: <PublicIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'South West USA',
-    icon: <PublicIcon sx={sxIcon}/>,
+    icon: <PublicIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Europe',
-    icon: <PublicIcon sx={sxIcon}/>,
+    icon: <PublicIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
-    icon: <PublicIcon sx={sxIcon}/>,
+    icon: <PublicIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
 ];

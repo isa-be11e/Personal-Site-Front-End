@@ -7,28 +7,27 @@ import UnderConstruction from '../../components/UnderConstruction';
 import MyAccordion from '../../components/MyAccordion'
 import ComputerIcon from '@mui/icons-material/Computer';
 import StorageIcon from '@mui/icons-material/Storage';
-
-const sxIcon = { ml: 1, mt: 0.2, fontSize: {md: 40} };
+import { accordionIcon } from '../../themes/icon';
 
 const topics= [
   {
     summary: 'Website - Front End',
-    icon: <ComputerIcon sx={sxIcon}/>,
+    icon: <ComputerIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Website - Back End',
-    icon: <StorageIcon sx={sxIcon}/>,
+    icon: <StorageIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Hackathons',
-    icon: <ComputerIcon sx={sxIcon}/>,
+    icon: <ComputerIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
-    icon: <ComputerIcon sx={sxIcon}/>,
+    icon: <ComputerIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
 ];

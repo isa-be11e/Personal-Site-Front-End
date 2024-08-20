@@ -7,23 +7,31 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Divider from '@mui/material/Divider';
+import { pageTitle } from '../themes/typography';
+import { fontSize, colours, fontFamily } from '../themes/global';
+import UnderConstruction from './UnderConstruction'
 
-const bgcolors= ['rgb(250, 245, 230)', 'rgb(240, 230, 210)', 'rgb(230, 215, 190)','rgb(220, 200, 170)'];
+const bgcolors= [
+  colours.lightBeige,
+  colours.medLightBeige,
+  colours.medDarkBeige,
+  colours.darkBeige,
+];
 
 export default function MyAccordion(props) {
   return (
     <Box>
-      <Typography sx={{ p: {xs: 5, md: 10}, justifyContent: 'center', fontFamily: 'monospace', fontWeight: 700, color: "rgb(0,50,50)", fontSize: {xs: 20, md: 30} }}>
+      <Typography sx={pageTitle}>
         {props.title}
-        <FavoriteBorderIcon sx={{ mt: -0.5, ml: 0.5, fontSize: {xs: 20, md: 30} }}/>
+        <FavoriteBorderIcon sx={{ mt: -0.5, ml: 0.5, fontSize: fontSize.responsive.large }}/>
       </Typography>
       {props.topics.map((topic, index) => (
         <Accordion
           key={index}
           sx={{ mx: {xs: 0, md:10},
             mb: {xs: 1, md: 5},
-            fontFamily: 'monospace',
-            color: "rgb(0,50,50)",
+            fontFamily,
+            color: colours.darkTeal,
           }}
         >
           <AccordionSummary
@@ -39,14 +47,16 @@ export default function MyAccordion(props) {
             {topic.summary}
             {topic.icon}
           </AccordionSummary>
-          <AccordionDetails sx={{ bgcolor: bgcolors[index], fontSize: {xs: 15, md: 20 }}}>
-            <Divider />
-            {topic.details}<br />
-            {topic.details}<br />
-            {topic.details}<br />
-            {topic.details}<br />
-            {topic.details}<br />
-          </AccordionDetails>
+          { !!topic.details
+            ? <AccordionDetails sx={{ bgcolor: bgcolors[index], fontSize: fontSize.responsive.med }}>
+              <Divider/>
+              {topic.details}
+            </AccordionDetails>
+            : <AccordionDetails sx={{ bgcolor: bgcolors[index], fontSize: fontSize.responsive.med }}>
+              <Divider/>
+              <UnderConstruction />
+            </AccordionDetails>
+          }
         </Accordion>
       ))}
     </Box>

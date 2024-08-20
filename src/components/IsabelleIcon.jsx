@@ -10,7 +10,6 @@ export default function IsabelleIcon(props) {
       <CssBaseline />
       <Typography
         href="/"
-        variant="h6"
         sx={{ ...props.sxProps }}
       >
         <Link href="/">

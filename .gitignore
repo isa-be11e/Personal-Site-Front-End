@@ -3,10 +3,6 @@
 #public pictures
 /public
 
-#attempts
-/src/components/MyAppBar2.tsx
-/src/components/ResponsiveAppBar.tsx
-
 # dependencies
 /node_modules
 /.pnp

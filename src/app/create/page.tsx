@@ -9,29 +9,27 @@ import RestaurantIcon from '@mui/icons-material/Restaurant';
 import LiquorIcon from '@mui/icons-material/Liquor';
 import GestureIcon from '@mui/icons-material/Gesture';
 import PsychologyIcon from '@mui/icons-material/Psychology';
-
-const sxIcon = { ml: 1, mt: 0.2, fontSize: {md: 40} };
+import { accordionIcon } from '../../themes/icon';
 
 const topics= [
   {
     summary: 'Cooking Class',
-    icon: <RestaurantIcon sx={sxIcon}/>,
+    icon: <RestaurantIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Crochet',
-    icon: <GestureIcon sx={sxIcon}/>,
+    icon: <GestureIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Fermentation',
-    icon: <LiquorIcon sx={sxIcon}/>,
+    icon: <LiquorIcon sx={accordionIcon}/>,
     details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
-    icon: <PsychologyIcon sx={sxIcon}/>,
-    details: 'Text to be replaced.'
+    icon: <PsychologyIcon sx={accordionIcon}/>,
   },
 ];
 

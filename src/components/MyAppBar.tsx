@@ -25,10 +25,12 @@ import SendIcon from '@mui/icons-material/Send';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import PsychologyIcon from '@mui/icons-material/Psychology';
+import { lightTitle, darkTitle } from '../themes/typography';
+import { colours } from '../themes/global';
 
 const drawerWidth = 180;
 const navItems = [
-  { name: 'Tech', icon: <ComputerIcon sx={{ mr: 1 }}/>, route: 'tech', iconName: 'ComputerIcon' },
+  { name: 'Tech', icon: <ComputerIcon sx={{ mr: 1 }}/>, route: 'tech' },
   { name: 'Move', icon: <DirectionsRunIcon sx={{ mr: 1 }}/>, route: 'move' },
   { name: 'Create', icon: <PsychologyIcon sx={{ mr: 1 }}/>, route: 'create' },
   { name: 'Share', icon: <GroupsIcon sx={{ mr: 1 }}/>, route: 'share' },
@@ -39,7 +41,7 @@ const navItems = [
 const contact = navItems[navItems.length-1];
 
 const navItem = (name, icon, route) => { return (
-  <Typography variant="subtitle1" sx={{ m: 2, fontFamily: 'monospace', fontWeight: 550, color: "OldLace" }} key={name}>
+  <Typography sx={{m: 2, ...lightTitle}} key={name}>
     <Link href={`/${route}`}>
       {icon}{name}
     </Link>
@@ -55,10 +57,8 @@ export default function MyAppBar(props: Props) {
   };
 
   const drawer = (
-    <Box id='inner-box' onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: 1, bgcolor: "OldLace", fontFamily: 'monospace', fontWeight: 700, color: "rgb(0,50,50)" }}>
-      <IsabelleIcon
-        sxProps={{ my: 2, fontFamily: 'monospace', fontWeight: 700, color: "rgb(0,50,50)" }}
-      />
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: 1, bgcolor: colours.lightBeige, fontFamily: 'monospace', fontWeight: 700, color: "rgb(0,50,50)" }}>
+      <IsabelleIcon sxProps={{my: 2, ...darkTitle}} />
       <Divider />
       <List>
         {navItems.map(({name, icon, route}) => (
@@ -79,7 +79,7 @@ export default function MyAppBar(props: Props) {
   return (
     <Box sx={{ display: 'flex'}}>
       <CssBaseline />
-      <AppBar position="sticky" component="nav" sx={{ bgcolor: "Teal" }}>
+      <AppBar position="sticky" component="nav" sx={{ bgcolor: colours.teal }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -88,22 +88,20 @@ export default function MyAppBar(props: Props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { lg: 'none' } }}
           >
-            <MenuIcon sx={{color: "OldLace"}}/>
+            <MenuIcon sx={{color: colours.lightBeige}}/>
           </IconButton>
-          <IsabelleIcon
-            sxProps={{ flexGrow: {xs: 1, lg: 0}, fontFamily: 'monospace', fontWeight: 550, color: "OldLace"}}
-          />
+          <IsabelleIcon sxProps={{ flexGrow: {xs: 1, lg: 0}, fontSize: 25, ...lightTitle}} />
           <Divider orientation="vertical" sx={{ml: 3, mr: 1, display: { xs: 'none', lg: 'flex' }}}/>
           <Box sx={{ display: { xs: 'none', lg: 'flex' }, flexGrow: 1}}>
             {navItems.slice(0,-1).map(({name, icon, route}) => (
               navItem(name, icon, route)
             ))}
           </Box>
-          <Box sx={{ display: { xs: 'none', lg: 'flex'}, color: "OldLace" }}>
+          <Box sx={{ display: { xs: 'none', lg: 'flex'}, color: colours.lightBeige }}>
             {navItem(contact.name, contact.icon, contact.route)}
           </Box>
           <Link href={'/contact'}>
-            <SendIcon sx={{ display: { xs: 'flex', lg: 'none'}, color: "OldLace" }} />
+            <SendIcon sx={{ display: { xs: 'flex', lg: 'none'}, color: colours.lightBeige }} />
           </Link>
         </Toolbar>
       </AppBar>
