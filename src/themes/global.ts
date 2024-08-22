@@ -2,6 +2,7 @@ const fontSize = {
   responsive: {
     large: { xs: 20, md: 30 },
     med: {xs: 15, md: 20 },
+    small: {xs: 13, md: 18 },
   },
 };
 

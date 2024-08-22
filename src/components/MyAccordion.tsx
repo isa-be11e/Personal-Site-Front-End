@@ -18,6 +18,8 @@ const bgcolors= [
   colours.darkBeige,
 ];
 
+const accordionDivider = <Divider sx={{ mb:2 }}/>;
+
 export default function MyAccordion(props) {
   return (
     <Box>
@@ -48,12 +50,12 @@ export default function MyAccordion(props) {
             {topic.icon}
           </AccordionSummary>
           { !!topic.details
-            ? <AccordionDetails sx={{ bgcolor: bgcolors[index], fontSize: fontSize.responsive.med }}>
-              <Divider/>
+            ? <AccordionDetails sx={{ bgcolor: bgcolors[index] }}>
+              {accordionDivider}
               {topic.details}
             </AccordionDetails>
             : <AccordionDetails sx={{ bgcolor: bgcolors[index], fontSize: fontSize.responsive.med }}>
-              <Divider/>
+              {accordionDivider}
               <UnderConstruction />
             </AccordionDetails>
           }

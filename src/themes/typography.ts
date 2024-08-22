@@ -25,10 +25,23 @@ const darkTitle = {
   color: colours.darkTeal,
 };
 
+const darkSubtitle = {
+  fontFamily,
+  fontWeight: lightFontWeight,
+  color: colours.darkTeal,
+  fontSize: fontSize.responsive.med,
+};
+
+const darkBody = {
+  fontFamily,
+  color: colours.darkTeal,
+  fontSize: fontSize.responsive.small,
+};
+
 const lightTitle = {
   fontFamily,
   fontWeight: lightFontWeight,
   color: colours.lightBeige,
 };
 
-export { pageTitle, pageSubtitle, darkTitle, lightTitle, };
+export { pageTitle, pageSubtitle, darkTitle, darkSubtitle, darkBody, lightTitle, };

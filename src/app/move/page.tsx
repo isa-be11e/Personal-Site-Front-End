@@ -9,12 +9,13 @@ import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import GroupIcon from '@mui/icons-material/Group';
 import { accordionIcon } from '../../themes/icon';
+import Acroyoga from './Acroyoga';
 
 const topics= [
   {
-    summary: 'Acro Yoga',
+    summary: 'Acroyoga',
     icon: <GroupIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
+    details: <Acroyoga />
   },
   {
     summary: 'Yoga',

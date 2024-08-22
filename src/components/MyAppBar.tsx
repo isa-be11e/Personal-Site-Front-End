@@ -57,7 +57,7 @@ export default function MyAppBar(props: Props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: 1, bgcolor: colours.lightBeige, fontFamily: 'monospace', fontWeight: 700, color: "rgb(0,50,50)" }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: 1, bgcolor: colours.lightBeige, ...darkTitle }}>
       <IsabelleIcon sxProps={{my: 2, ...darkTitle}} />
       <Divider />
       <List>

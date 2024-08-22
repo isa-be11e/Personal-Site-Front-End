@@ -20,12 +20,10 @@ const topics= [
   {
     summary: 'Crochet',
     icon: <GestureIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
   },
   {
     summary: 'Fermentation',
     icon: <LiquorIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
