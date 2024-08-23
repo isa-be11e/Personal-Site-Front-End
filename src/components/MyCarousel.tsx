@@ -28,7 +28,7 @@ const typographyStyle = {
   position: 'absolute',
   bgcolor: colours.darkBeige,
   p: {xs: 0.5, md: 1},
-  m: {xs: 1, md: 2},
+  m: {xs: 2, md: 4},
   border: 2,
   borderRadius: 2,
   borderColor: colours.darkTeal,
@@ -38,7 +38,7 @@ const typographyStyle = {
 const imageBorder = { border: `2px solid ${colours.darkTeal}` };
 
 const image = pic => {
-  return (<Image src={pic.source} alt={pic.alt} style={imageBorder}/>);
+  return (<Image src={pic.source} alt={pic.alt} style={{width: '100%', height: 'auto', ...imageBorder}}/>);
 };
 
 export default function MyCarousel(props) {

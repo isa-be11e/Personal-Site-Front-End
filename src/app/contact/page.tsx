@@ -52,9 +52,9 @@ export default function Page() {
             spacing={2}
             sx={{
               maxWidth: 1,
-              width: { md: 500 },
-              '.MuiInputLabel-root': { fontFamily, color: colours.greyTeal },
-              '.MuiInputBase-root': { fontFamily, color: colours.darkTeal },
+              width: { xs: 300, md: 500 },
+              '.MuiInputLabel-root': { fontFamily, color: colours.greyTeal, fontSize: fontSize.responsive.small },
+              '.MuiInputBase-root': { fontFamily, color: colours.darkTeal, fontSize: fontSize.responsive.small },
             }}
           >
           <Typography sx={pageSubtitle}>
@@ -64,7 +64,12 @@ export default function Page() {
           <TextField id="email" label="Email" variant="outlined" onChange={(e) => setEmail(e.target.value)}/>
           <TextField id="message" label="Message" variant="outlined" multiline rows={4} onChange={(e) => setMessage(e.target.value)}/>
           <Box justifyContent="center" display="flex">
-            <Button justifyContent="center" variant="outlined" sx={{ maxWidth: 0.9, width: { md: 200 }, bgcolor: colours.darkBeige, ...pageSubtitle}} onClick={sendMail}>Send</Button>
+            <Button
+              sx={{ border: 2, borderColor: colours.darkTeal, maxWidth: 0.9, width: { md: 200 }, bgcolor: colours.darkBeige, ...pageSubtitle}}
+              onClick={sendMail}
+            >
+              Send
+            </Button>
           </Box>
           </Stack>
         </Box>

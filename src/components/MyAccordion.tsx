@@ -51,7 +51,6 @@ export default function MyAccordion(props) {
           </AccordionSummary>
           { !!topic.details
             ? <AccordionDetails sx={{ bgcolor: bgcolors[index] }}>
-              {accordionDivider}
               {topic.details}
             </AccordionDetails>
             : <AccordionDetails sx={{ bgcolor: bgcolors[index], fontSize: fontSize.responsive.med }}>

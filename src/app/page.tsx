@@ -1,7 +1,6 @@
 "use client"
 import CssBaseline from "@mui/material/CssBaseline";
 import React from "react";
-import Link from '@mui/material/Link';
 import pic1 from "../../public/IMG_0230.JPG";
 import pic2 from "../../public/IMG_0232.JPG";
 import pic3 from "../../public/IMG_0233.JPG";
@@ -10,7 +9,6 @@ import Typography from '@mui/material/Typography';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { pageTitle } from '../themes/typography';
 import { fontSize } from '../themes/global';
-import "react-multi-carousel/lib/styles.css";
 import MyCarousel from '../components/MyCarousel';
 
 const pics = [
@@ -32,8 +30,6 @@ const responsive = {
     slidesToSlide: 1, // optional, default to 1.
   }
 };
-
-const imagePadding = { padding: '5px'};
 
 export default function Page() {
   return (

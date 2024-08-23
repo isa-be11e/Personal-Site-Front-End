@@ -1,7 +1,7 @@
 "use client";
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import Link from "next/link";
+import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
@@ -29,23 +29,22 @@ import { lightTitle, darkTitle } from '../themes/typography';
 import { colours } from '../themes/global';
 
 const drawerWidth = 180;
+const iconSx = { mr: 1, mb: -1 };
 const navItems = [
-  { name: 'Tech', icon: <ComputerIcon sx={{ mr: 1 }}/>, route: 'tech' },
-  { name: 'Move', icon: <DirectionsRunIcon sx={{ mr: 1 }}/>, route: 'move' },
-  { name: 'Create', icon: <PsychologyIcon sx={{ mr: 1 }}/>, route: 'create' },
-  { name: 'Share', icon: <GroupsIcon sx={{ mr: 1 }}/>, route: 'share' },
-  { name: 'Travel', icon: <FlightTakeoffIcon sx={{ mr: 1 }}/>, route: 'travel' },
-  { name: 'Contact', icon: <SendIcon sx={{ mr: 1 }}/>, route: 'contact' },
+  { name: 'Tech', icon: <ComputerIcon sx={iconSx}/>, route: 'tech' },
+  { name: 'Move', icon: <DirectionsRunIcon sx={iconSx}/>, route: 'move' },
+  { name: 'Create', icon: <PsychologyIcon sx={iconSx}/>, route: 'create' },
+  { name: 'Share', icon: <GroupsIcon sx={iconSx}/>, route: 'share' },
+  { name: 'Travel', icon: <FlightTakeoffIcon sx={iconSx}/>, route: 'travel' },
+  { name: 'Contact', icon: <SendIcon sx={iconSx}/>, route: 'contact' },
 ];
 
 const contact = navItems[navItems.length-1];
 
 const navItem = (name, icon, route) => { return (
-  <Typography sx={{m: 2, ...lightTitle}} key={name}>
-    <Link href={`/${route}`}>
-      {icon}{name}
-    </Link>
-  </Typography>);
+  <Link href={`/${route}`} underline="none" key={name} sx={{m: 2, ...lightTitle}}>
+    {icon}{name}
+  </Link>);
 };
 
 export default function MyAppBar(props: Props) {
@@ -57,14 +56,14 @@ export default function MyAppBar(props: Props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: 1, bgcolor: colours.lightBeige, ...darkTitle }}>
-      <IsabelleIcon sxProps={{my: 2, ...darkTitle}} />
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: 1, bgcolor: colours.lightBeige}}>
+      <IsabelleIcon sxProps={{my: 5, ...darkTitle, fontSize: 25}} />
       <Divider />
       <List>
         {navItems.map(({name, icon, route}) => (
           <ListItem key={name} disablePadding>
             <ListItemButton>
-              <Link href={`/${route}`}>
+              <Link href={`/${route}`} underline="none" sx={darkTitle} >
                 {icon}{name}
               </Link>
             </ListItemButton>

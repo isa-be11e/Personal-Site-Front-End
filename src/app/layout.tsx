@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+//import "./globals.css";
 import MyAppBar from "../components/MyAppBar"
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body style={{background: colours.darkTeal}}>
         <MyAppBar/>
         <Container maxWidth ="xl">
           <Box sx={{ bgcolor: colours.lightTeal, height: '100vh'}}>
