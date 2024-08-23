@@ -23,7 +23,7 @@ export default function RootLayout({
       <body style={{background: colours.darkTeal}}>
         <MyAppBar/>
         <Container maxWidth ="xl">
-          <Box sx={{ bgcolor: colours.lightTeal, height: '100vh'}}>
+          <Box sx={{ bgcolor: colours.lightTeal, minHeight: '100vh'}}>
             {children}
           </Box>
         </Container>
