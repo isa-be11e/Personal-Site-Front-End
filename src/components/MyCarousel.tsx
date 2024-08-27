@@ -4,7 +4,7 @@ import Link from '@mui/material/Link';
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import Typography from '@mui/material/Typography';
-import { pageTitle, darkBody } from '../themes/typography';
+import { pageTitle, darkBody, darkLabel } from '../themes/typography';
 import { colours } from '../themes/global';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -22,7 +22,7 @@ const responsive = {
 
 const imagePadding = { padding: '5px'};
 
-const typographyStyle = {
+const buttonStyle = {
   bottom: 0,
   left: 0,
   position: 'absolute',
@@ -34,6 +34,17 @@ const typographyStyle = {
   borderRadius: 2,
   borderColor: colours.darkTeal,
   ...darkBody
+};
+
+const labelStyle = {
+  bottom: 0,
+  left: 0,
+  position: 'absolute',
+  bgcolor: 'rgba(140,210,210,0.6)',
+  p: {xs: 0.2, md: 0.5},
+  ml: {xs: 1, md: 3},
+  mb: {xs: 2, md: 4},
+  ...darkLabel
 };
 
 const image = pic => {
@@ -48,7 +59,6 @@ export default function MyCarousel(props) {
       infinite={true}
       //autoPlay={true}
       autoPlaySpeed={3000}
-      transitionDuration={1000}
       centerMode={true}
     >
       {props.pics.map((pic, index) => (
@@ -56,9 +66,11 @@ export default function MyCarousel(props) {
           {!!pic.route
             ? <Link href={`/${pic.route}`}>
                 {image(pic)}
-                <Typography sx={typographyStyle}>{pic.text}</Typography>
+                <Typography sx={buttonStyle}>{pic.text}</Typography>
               </Link>
-            : image(pic)
+            : !!pic.text
+              ? <Box>{image(pic)}<Typography sx={labelStyle}>{pic.text}</Typography></Box>
+              : image(pic)
           }
         </Box>
       ))}

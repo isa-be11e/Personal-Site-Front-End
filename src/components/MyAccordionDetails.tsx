@@ -8,11 +8,10 @@ export default function MyAccordionDetails(props) {
   return (
     <>
       {props.sections.map((section, index) => (
-        <Box key={index}>
+        <Box key={`detail_${index}`}>
           <Divider sx={ index ===0 ? {mb: 2} : {my: 2} } />
           <Typography sx={{ mb: 1, ...darkSubtitle}}>{section.title}</Typography>
-          <Typography sx={darkBody}>{section.body}</Typography>
-          {section.extras}
+          {section.body}
         </Box>
       ))}
     </>

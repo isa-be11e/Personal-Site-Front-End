@@ -3,6 +3,7 @@ const fontSize = {
     large: { xs: 20, md: 30 },
     med: {xs: 15, md: 20 },
     small: {xs: 13, md: 18 },
+    label: {xs: 10, md: 15 },
   },
 };
 

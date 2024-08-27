@@ -13,22 +13,18 @@ const topics= [
   {
     summary: 'Food Bank',
     icon: <FoodBankIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
   },
   {
     summary: 'Meetups',
     icon: <GroupsIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
     icon: <GroupsIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
     icon: <GroupsIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
   },
 ];
 

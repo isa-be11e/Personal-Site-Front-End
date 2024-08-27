@@ -38,10 +38,16 @@ const darkBody = {
   fontSize: fontSize.responsive.small,
 };
 
+const darkLabel = {
+  fontFamily,
+  color: colours.darkTeal,
+  fontSize: fontSize.responsive.label,
+};
+
 const lightTitle = {
   fontFamily,
   fontWeight: lightFontWeight,
   color: colours.lightBeige,
 };
 
-export { pageTitle, pageSubtitle, darkTitle, darkSubtitle, darkBody, lightTitle, };
+export { pageTitle, pageSubtitle, darkTitle, darkSubtitle, darkBody, darkLabel, lightTitle, };

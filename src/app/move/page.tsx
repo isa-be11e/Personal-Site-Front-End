@@ -9,28 +9,26 @@ import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import GroupIcon from '@mui/icons-material/Group';
 import { accordionIcon } from '../../themes/icon';
-import Acroyoga from './Acroyoga';
+import acroyogaSections from './acroyoga';
+import MyAccordionDetails from '../../components/MyAccordionDetails';
 
 const topics= [
   {
     summary: 'Acroyoga',
     icon: <GroupIcon sx={accordionIcon}/>,
-    details: <Acroyoga />
+    details: <MyAccordionDetails sections={acroyogaSections}/>
   },
   {
     summary: 'Yoga',
     icon: <SelfImprovementIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
   },
   {
     summary: 'Gym',
     icon: <FitnessCenterIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
     icon: <FitnessCenterIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
   },
 ];
 

@@ -13,22 +13,18 @@ const topics= [
   {
     summary: 'Website - Front End',
     icon: <ComputerIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
   },
   {
     summary: 'Website - Back End',
     icon: <StorageIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
   },
   {
     summary: 'Hackathons',
     icon: <ComputerIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
   },
   {
     summary: 'Other',
     icon: <ComputerIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
   },
 ];
 

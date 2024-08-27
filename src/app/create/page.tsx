@@ -10,12 +10,14 @@ import LiquorIcon from '@mui/icons-material/Liquor';
 import GestureIcon from '@mui/icons-material/Gesture';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import { accordionIcon } from '../../themes/icon';
+import cooking from './cooking';
+import MyAccordionDetails from '../../components/MyAccordionDetails';
 
 const topics= [
   {
-    summary: 'Cooking Class',
+    summary: 'Cooking Classes',
     icon: <RestaurantIcon sx={accordionIcon}/>,
-    details: 'Text to be replaced.'
+    details: <MyAccordionDetails sections={cooking}/>
   },
   {
     summary: 'Crochet',
