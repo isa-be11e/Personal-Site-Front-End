@@ -2,9 +2,13 @@ import cookingAttire from "../../../public/cooking_class.jpeg";
 import phylloQuiche from "../../../public/cooking_class_1.jpeg";
 import soba from "../../../public/cooking/soba.jpeg";
 import frittata from "../../../public/cooking/frittata.jpeg";
+import thailand from "../../../public/cooking/thailand.jpeg";
+import thailand_vid from "../../../public/cooking/thailand.mp4";
+import thailand_1 from "../../../public/cooking/thailand_1.jpeg";
 import pic3 from "../../../public/vietnam_cooking.jpeg";
 import pic4 from "../../../public/vietnam_cooking_1.jpeg";
-import AccordionDetailBody from '../../components/AccordionDetailBody';
+import AccordionDetailBody from '../../components/accordion/AccordionDetailBody';
+import Box from '@mui/material/Box';
 
 const GBPics = [
    {source: cookingAttire, alt: 'Isabelle standing in front of a cutting board while at her George Brown Culinary Course', text: 'Course Attire'},
@@ -19,7 +23,8 @@ const vietnamPics = [
 ];
 
 const thailandPics = [
-  {source: pic3, alt: 'Isabelle standing on a street in Hoi An, Vietnam', text: 'Vietnam'},
+  {source: thailand, alt: 'Several Thai soups' },
+  {source: thailand_1, alt: 'Thai ingredients including red and green chili paste' },
 ];
 
 const resources = [
@@ -51,10 +56,9 @@ const sections = [
     title: 'Vietnam',
     body: <AccordionDetailBody pics={vietnamPics}>
       While I was in Hoi An, Vietnam I ate at an amazing restaurant and saw they offer a cooking class.
-      I thought it would be an amazing way to learn more about Vietnamese food and culture.
+      I thought it would be an great way to learn more about Vietnamese food and culture.
       It was so interesting to go to the local market and pick up the ingredients for class, trying various treats along the way.
       We made spring rolls, "chicken" salad made from tofu and seitan, and vietnamese pancakes - savory pancakes served with greens and vermicelli noodles.
-      TODO: MORE
     </AccordionDetailBody>,
   },
   {
@@ -62,7 +66,8 @@ const sections = [
     body: <AccordionDetailBody pics={thailandPics}>
       I loved the cooking class in Vietnam so much that when I was in Chiang Mai, Thailand I took another.
       I had been eating Thai food up til then as we have a good selection in Toronto as well, so it was very interesting to learn more about the ingredients.
-      TODO: MORE + PICS
+      For instance, tom yam herbs are lemongrass, kaffir lime leaves, galangal and tom yam soup can have many variations by adding different ingredients like basil, noodles, and coconut milk.
+      We made red and green chili paste - the basis for Thai curries, pumpkin hummus, pad thai, and more!
     </AccordionDetailBody>
   },
   {

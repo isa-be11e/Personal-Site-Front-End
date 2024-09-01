@@ -1,6 +1,6 @@
 "use client";
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
+import MUIAppBar from '@mui/material/AppBar';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -47,7 +47,7 @@ const navItem = (name, icon, route) => { return (
   </Link>);
 };
 
-export default function MyAppBar(props: Props) {
+export default function AppBar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -56,7 +56,7 @@ export default function MyAppBar(props: Props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: 1, bgcolor: colours.lightBeige}}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: 1, bgcolor: colours.secondaryBackground}}>
       <IsabelleIcon sxProps={{my: 5, ...darkTitle, fontSize: 25}} />
       <Divider />
       <List>
@@ -78,7 +78,7 @@ export default function MyAppBar(props: Props) {
   return (
     <Box sx={{ display: 'flex'}}>
       <CssBaseline />
-      <AppBar position="sticky" component="nav" sx={{ bgcolor: colours.teal }}>
+      <MUIAppBar position="sticky" component="nav" sx={{ bgcolor: colours.appBar }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -87,7 +87,7 @@ export default function MyAppBar(props: Props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { lg: 'none' } }}
           >
-            <MenuIcon sx={{color: colours.lightBeige}}/>
+            <MenuIcon sx={{color: colours.secondaryText}}/>
           </IconButton>
           <IsabelleIcon sxProps={{ flexGrow: {xs: 1, lg: 0}, fontSize: 25, ...lightTitle}} />
           <Divider orientation="vertical" sx={{ml: 3, mr: 1, display: { xs: 'none', lg: 'flex' }}}/>
@@ -96,14 +96,14 @@ export default function MyAppBar(props: Props) {
               navItem(name, icon, route)
             ))}
           </Box>
-          <Box sx={{ display: { xs: 'none', lg: 'flex'}, color: colours.lightBeige }}>
+          <Box sx={{ display: { xs: 'none', lg: 'flex'}, color: colours.secondaryText }}>
             {navItem(contact.name, contact.icon, contact.route)}
           </Box>
           <Link href={'/contact'}>
-            <SendIcon sx={{ display: { xs: 'flex', lg: 'none'}, color: colours.lightBeige }} />
+            <SendIcon sx={{ display: { xs: 'flex', lg: 'none'}, color: colours.secondaryText }} />
           </Link>
         </Toolbar>
-      </AppBar>
+      </MUIAppBar>
       <nav>
         <Drawer
           container={container}

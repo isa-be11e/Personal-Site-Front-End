@@ -1,12 +1,9 @@
 import { fontSize, colours, fontFamily } from './global';
 
-const heavyFontWeight = 700;
-const lightFontWeight = 550;
-
 const pageTitle = {
   fontFamily,
-  fontWeight: heavyFontWeight,
-  color: colours.darkTeal,
+  fontWeight: 'bold',
+  color: colours.primaryText,
   p: {xs: 5, md: 10},
   justifyContent: 'center',
   fontSize: fontSize.responsive.large,
@@ -14,40 +11,41 @@ const pageTitle = {
 
 const pageSubtitle = {
   fontFamily,
-  fontWeight: heavyFontWeight,
-  color: colours.darkTeal,
+  fontWeight: 'bold',
+  color: colours.primaryText,
   fontSize: fontSize.responsive.med,
 };
 
 const darkTitle = {
   fontFamily,
-  fontWeight: heavyFontWeight,
-  color: colours.darkTeal,
+  fontWeight: 'bold',
+  color: colours.primaryText,
+  fontSize: fontSize.responsive.large,
 };
 
 const darkSubtitle = {
   fontFamily,
-  fontWeight: lightFontWeight,
-  color: colours.darkTeal,
+  fontWeight: 'bold',
+  color: colours.primaryText,
   fontSize: fontSize.responsive.med,
 };
 
 const darkBody = {
   fontFamily,
-  color: colours.darkTeal,
+  color: colours.primaryText,
   fontSize: fontSize.responsive.small,
 };
 
 const darkLabel = {
   fontFamily,
-  color: colours.darkTeal,
+  color: colours.primaryText,
   fontSize: fontSize.responsive.label,
 };
 
 const lightTitle = {
   fontFamily,
-  fontWeight: lightFontWeight,
-  color: colours.lightBeige,
+  fontWeight: 'bold',
+  color: colours.secondaryText,
 };
 
 export { pageTitle, pageSubtitle, darkTitle, darkSubtitle, darkBody, darkLabel, lightTitle, };

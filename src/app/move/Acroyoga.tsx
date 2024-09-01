@@ -3,14 +3,14 @@ import pic1 from "../../../public/IMG_6570.jpeg";
 import pic2 from "../../../public/IMG_6572.jpeg";
 import pic3 from "../../../public/IMG_6574.jpeg";
 import pic4 from "../../../public/IMG_6577.jpeg";
-import AccordionLink from '../../components/AccordionLink';
-import AccordionDetailBody from '../../components/AccordionDetailBody';
+import AccordionLink from '../../components/accordion/AccordionLink';
+import AccordionDetailBody from '../../components/accordion/AccordionDetailBody';
 
 const acroPoses = [
-  {source: pic1, alt: 'acroyoga bird pose'},
-  {source: pic2, alt: 'acroyoga bow pose'},
-  {source: pic3, alt: 'acroyoga chair pose'},
-  {source: pic4, alt: 'acroyoga whale pose'},
+  {source: pic1, alt: 'acroyoga bird pose', text: 'Bird Pose'},
+  {source: pic2, alt: 'acroyoga bow pose', text: 'Bow Pose'},
+  {source: pic3, alt: 'acroyoga chair pose', text: 'Chair Pose'},
+  {source: pic4, alt: 'acroyoga whale pose', text: 'Whale Pose'},
 ];
 
 const groupPics = [
@@ -54,7 +54,7 @@ const sections = [
       <br/><br/>
       <b>Community</b> - I regularly attend acroyoga jams, which are community events where everyone can some together to play.
       I love introducing curious people to acroyoga and showing them the ropes in a safe environment - and also getting to learn from seasoned experts willing to share their knowledge.
-      I\'ve also created a Meetup group for acroyoga so the community has a space to announce jams and classes.
+      I've also created a Meetup group for acroyoga so the community has a space to announce jams and classes.
     </AccordionDetailBody>,
   },
   {

@@ -1,10 +1,10 @@
 import React from "react";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { darkSubtitle, darkBody } from '../themes/typography';
+import { darkSubtitle, darkBody } from '../../themes/typography';
 import Divider from '@mui/material/Divider';
 
-export default function MyAccordionDetails(props) {
+export default function AccordionDetails(props) {
   return (
     <>
       {props.sections.map((section, index) => (

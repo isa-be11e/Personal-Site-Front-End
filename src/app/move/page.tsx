@@ -4,13 +4,13 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import UnderConstruction from '../../components/UnderConstruction';
-import MyAccordion from '../../components/MyAccordion'
+import MyAccordion from '../../components/accordion/Accordion'
 import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import GroupIcon from '@mui/icons-material/Group';
 import { accordionIcon } from '../../themes/icon';
 import acroyogaSections from './acroyoga';
-import MyAccordionDetails from '../../components/MyAccordionDetails';
+import MyAccordionDetails from '../../components/accordion/AccordionDetails';
 
 const topics= [
   {

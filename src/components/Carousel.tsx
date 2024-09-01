@@ -6,7 +6,7 @@ import Image from "next/image";
 import Typography from '@mui/material/Typography';
 import { pageTitle, darkBody, darkLabel } from '../themes/typography';
 import { colours } from '../themes/global';
-import Carousel from "react-multi-carousel";
+import ReactCarousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 const responsive = {
@@ -26,13 +26,13 @@ const buttonStyle = {
   bottom: 0,
   left: 0,
   position: 'absolute',
-  bgcolor: colours.darkBeige,
+  bgcolor: colours.buttonColour,
   p: {xs: 0.5, md: 1},
   ml: {xs: 1, md: 3},
   mb: {xs: 2, md: 4},
   border: 2,
   borderRadius: 2,
-  borderColor: colours.darkTeal,
+  borderColor: colours.outline,
   ...darkBody
 };
 
@@ -48,12 +48,12 @@ const labelStyle = {
 };
 
 const image = pic => {
-  return (<Image src={pic.source} alt={pic.alt} style={{width: '100%', height: 'auto', border: `2px solid ${colours.darkTeal}`}}/>);
+  return (<Image src={pic.source} alt={pic.alt} style={{width: '100%', height: 'auto', border: `2px solid ${colours.outline}`}}/>);
 };
 
-export default function MyCarousel(props) {
+export default function Carousel(props) {
   return (
-    <Carousel
+    <ReactCarousel
       draggable={false}
       responsive={responsive}
       infinite={true}
@@ -74,6 +74,6 @@ export default function MyCarousel(props) {
           }
         </Box>
       ))}
-    </Carousel>
+    </ReactCarousel>
   );
 }

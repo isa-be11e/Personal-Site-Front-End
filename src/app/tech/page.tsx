@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import UnderConstruction from '../../components/UnderConstruction';
-import MyAccordion from '../../components/MyAccordion'
+import MyAccordion from '../../components/accordion/Accordion'
 import ComputerIcon from '@mui/icons-material/Computer';
 import StorageIcon from '@mui/icons-material/Storage';
 import { accordionIcon } from '../../themes/icon';

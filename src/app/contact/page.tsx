@@ -30,9 +30,9 @@ export default function Page() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Typography sx={pageTitle}>
+      <Typography sx={{display: 'flex', ...pageTitle}}>
         Let's get in touch.
-        <FavoriteBorderIcon sx={{ mt: -0.5, ml: 0.5, fontSize: fontSize.responsive.large }}/>
+        <FavoriteBorderIcon sx={{ mt: 0.5, fontSize: fontSize.responsive.large }}/>
       </Typography>
       <Box justifyContent="center" display="flex">
         <Box
@@ -40,11 +40,11 @@ export default function Page() {
           noValidate
           autoComplete="off"
           sx={{
-            bgcolor: colours.lightBeige,
+            bgcolor: colours.secondaryBackground,
             p: {xs: 1, md: 5},
             border: 2,
             borderRadius: 2,
-            borderColor: colours.darkTeal,
+            borderColor: colours.outline,
             maxWidth: 1,
           }}
         >
@@ -53,8 +53,8 @@ export default function Page() {
             sx={{
               maxWidth: 1,
               width: { xs: 300, md: 500 },
-              '.MuiInputLabel-root': { fontFamily, color: colours.greyTeal, fontSize: fontSize.responsive.small },
-              '.MuiInputBase-root': { fontFamily, color: colours.darkTeal, fontSize: fontSize.responsive.small },
+              '.MuiInputLabel-root': { fontFamily, color: colours.grey, fontSize: fontSize.responsive.small },
+              '.MuiInputBase-root': { fontFamily, color: colours.primaryText, fontSize: fontSize.responsive.small },
             }}
           >
           <Typography sx={pageSubtitle}>
@@ -65,7 +65,7 @@ export default function Page() {
           <TextField id="message" label="Message" variant="outlined" multiline rows={4} onChange={(e) => setMessage(e.target.value)}/>
           <Box justifyContent="center" display="flex">
             <Button
-              sx={{ border: 2, borderColor: colours.darkTeal, maxWidth: 0.9, width: { md: 200 }, bgcolor: colours.darkBeige, ...pageSubtitle}}
+              sx={{ border: 2, borderColor: colours.outline, maxWidth: 0.9, width: { md: 200 }, bgcolor: colours.buttonColour, ...pageSubtitle}}
               onClick={sendMail}
             >
               Send

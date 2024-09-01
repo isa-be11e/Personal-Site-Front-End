@@ -4,14 +4,14 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import UnderConstruction from '../../components/UnderConstruction';
-import MyAccordion from '../../components/MyAccordion'
+import MyAccordion from '../../components/accordion/Accordion'
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import LiquorIcon from '@mui/icons-material/Liquor';
 import GestureIcon from '@mui/icons-material/Gesture';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import { accordionIcon } from '../../themes/icon';
 import cooking from './cooking';
-import MyAccordionDetails from '../../components/MyAccordionDetails';
+import MyAccordionDetails from '../../components/accordion/AccordionDetails';
 
 const topics= [
   {

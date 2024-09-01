@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { pageTitle } from '../themes/typography';
 import { fontSize } from '../themes/global';
-import MyCarousel from '../components/MyCarousel';
+import Carousel from '../components/Carousel';
 
 const pics = [
   {source: pic1, alt: 'alt', route:'tech', text: 'Tech'},
@@ -35,7 +35,7 @@ export default function Page() {
   return (
     <React.Fragment>
     <CssBaseline />
-      <MyCarousel pics={pics} ></MyCarousel>
+      <Carousel pics={pics} ></Carousel>
       <Typography sx={pageTitle}>
         Hello! <br />
         Welcome to  my website where you can find out more about me.
