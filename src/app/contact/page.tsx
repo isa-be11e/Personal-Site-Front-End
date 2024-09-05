@@ -12,19 +12,41 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { pageTitle, pageSubtitle } from '../../themes/typography';
 import { fontSize, colours, fontFamily } from '../../themes/global';
 import axios from 'axios';
+import Snackbar, { SnackbarCloseReason } from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 export default function Page() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
+  const [open, setOpen] = React.useState(false);
+  const [status, setStatus] = React.useState('error');
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (
+    event?: React.SyntheticEvent | Event,
+    reason?: SnackbarCloseReason,
+  ) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
+
 
   const sendMail = () => {
     axios.get("http://localhost:4000/", { params: { name, email, message }})
     .then(() => {
-      console.log("success");
+      setStatus('success');
     })
     .catch(() => {
-      console.log("failure");
+      setStatus('error');
+    })
+    .finally(() => {
+      setOpen(true);
     });
   };
   return (
@@ -54,6 +76,7 @@ export default function Page() {
               maxWidth: 1,
               width: { xs: 300, md: 500 },
               '.MuiInputLabel-root': { fontFamily, color: colours.grey, fontSize: fontSize.responsive.small },
+              '.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: colours.appBar },
               '.MuiInputBase-root': { fontFamily, color: colours.primaryText, fontSize: fontSize.responsive.small },
             }}
           >
@@ -74,6 +97,22 @@ export default function Page() {
           </Stack>
         </Box>
       </Box>
+      <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+        <Alert
+          severity={status}
+          onClose={handleClose}
+          sx={{
+            bgcolor: colours.alert[status].primary,
+            color: colours.alert[status].secondary,
+            border: 2,
+            '.MuiAlert-icon': {color:  colours.alert[status].secondary}
+          }}
+        >
+          <Typography sx={{fontFamily, fontSize: 15}}>
+            {status === 'success' ? 'Email Send Successfully!' : 'Email Send Failed.'}
+          </Typography>
+        </Alert>
+      </Snackbar>
     </React.Fragment>
   );
 }

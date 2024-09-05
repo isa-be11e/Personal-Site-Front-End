@@ -28,6 +28,14 @@ const colourWheel = {
     medium: 'rgb(60, 50, 50)',
     dark: 'rgb(50, 40, 40)',
   },
+  red: {
+    light: 'rgb(150,200,120)',
+    dark: 'rgb(10,60,10)',
+  },
+  green: {
+    light: 'rgb(240,100,100)',
+    dark: 'rgb(60,0,10)',
+  }
 };
 
 const colours = {
@@ -44,7 +52,11 @@ const colours = {
     colourWheel.beige.light,
     colourWheel.beige.medium,
     colourWheel.beige.dark,
-  ]
+  ],
+  alert: {
+    success: { primary: colourWheel.red.light, secondary: colourWheel.red.dark },
+    error: { primary: colourWheel.green.light, secondary: colourWheel.green.dark },
+  },
 };
 /*
 const colours = {
@@ -61,7 +73,11 @@ const colours = {
     colourWheel.brown.light,
     colourWheel.brown.medium,
     colourWheel.brown.dark,
-  ]
+  ],
+  alert: {
+    success: { primary: 'rgb(10,60,10)', secondary: 'rgb(150,200,120)' },
+    error: { primary: 'rgb(60,0,10)', secondary: 'rgb(240,100,100)' },
+  },
 };*/
 
 const fontFamily = 'monospace';
